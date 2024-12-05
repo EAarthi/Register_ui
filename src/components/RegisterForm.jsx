@@ -97,6 +97,7 @@ const RegisterForm = () => {
           <input
             type="date"
             id="date_of_joining"
+            max={new Date().toISOString().split('T')[0]}
             name="date_of_joining"
             onChange={handleChange}
           />
