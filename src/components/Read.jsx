@@ -10,7 +10,7 @@ const Read = () => {
     // Fetch data from the backend
     const fetchData = async () => {
       try {
-        const response = await Axios.get(`${import.meta.env.VITE_API_URL}/register`); // Adjust URL if needed
+        const response = await Axios.get(`${import.meta.env.VITE_API_URL}/read`); // Adjust URL if needed
         setEmployees(response.data); // Update state with fetched data
       } catch (error) {
         console.error("Error fetching employee data:", error);
@@ -49,7 +49,7 @@ const Read = () => {
         </tbody>
       </table>
       <div>
-        <button className="btn btn-success" onClick={() => navigate('/')}>ADD Details</button>
+        <button onClick={() => navigate('/')}>ADD Details</button>
       </div>
     </div>
   );
